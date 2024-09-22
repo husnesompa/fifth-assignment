@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <section class="bg-[#F9F7F3]">
+    <section class="bg-[#F9F7F3] sticky top-0 z-50">
         <div class="container mx-auto pb-10">
             <div class="navbar">
                 <div class="navbar-start">
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <a class="btn bg-[#B4F461] px-8 bold font-bold font-black">Blog</a>
+                        <a class="btn bg-[#B4F461] px-8 bold font-bold font-black" href="blog.html">Blog</a>
                     </div>
                 </div>
                 <div class="navbar-center hidden lg:flex">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="navbar-end">
                     <img src="images/coin.png">
-                    <p class="pl-2">5400BDT</p>
+                    <p id="total_amount" class="pl-2">5400BDT</p>
                 </div>
             </div>
             <!-- ---- Button------ -->
@@ -49,11 +49,11 @@
         </div>
     </section>
     <div class="flex justify-center space-x-4 pt-10">
-        <button class="btn btn-outline">Donation</button>
-        <button class="btn btn-outline px-6">History</button>
+        <button id="donationBtn" class="btn btn-outline">Donation</button>
+        <button id="hitoryBtn" class="btn btn-outline px-6">History</button>
     </div>
     <!-- -----Card Section ----- -->
-    <section>
+    <section id="donation_section">
         <div class="container mx-auto">
             <!-- ---Card:1---- -->
             <div class="flex flex-col lg:flex-row items-center bg-white border-2 rounded-lg p-6 m-8 space-y-6">
@@ -72,8 +72,8 @@
                         contribution, big or small, makes a difference. Please join us in supporting the relief efforts
                         and making a positive impact on the lives of those in need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="btn w-full bg-[#B4F461]">Donate Now</button>
+                    <input id="donation_input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button id="donate_now_button" class="btn w-full bg-[#B4F461]">Donate Now</button>
                 </div>
             </div>
 
@@ -123,15 +123,19 @@
         </div>
     </section>
     <!-- -----History Section ----- -->
-     <section>
+     <section id="history_section" class="hidden">
         <div class="container mx-auto w-5/6">
-            <div class="border-2 p-4">
+            <div class="border-2 p-4 my-4">
                 <h3>cccsdcd</h3>
                 <p>sdcdscv</p>
             </div>
         </div>
      </section>
-
+     <footer class="bg-[#F9F7F3]">
+            <p>Husna Sompa</p>
+     </footer>
+     <script src="js/common.js"></script>
+<script src="js/button.js"></script>
 </body>
 
 </html>
