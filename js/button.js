@@ -18,13 +18,13 @@ modalCloseButton.addEventListener('click', function () {
     modal.close();   // Close the modal
 });
 
-let totalAmount = getTextById('total_amount');
+
 // -------Donation button , validation, calculation , transaction history and modal ------
 document.getElementById('donate_now_button').addEventListener('click', function (event) {
     event.preventDefault();
 
+    let totalAmount = getTextById('total_amount');
     const inputDonateMoney = getInputFieldById('donation_input');
-
     const donationAmount = getTextById('donation_amount');
 
     if (totalAmount > inputDonateMoney && inputDonateMoney > 0 && !isNaN(inputDonateMoney)) {
@@ -50,19 +50,24 @@ document.getElementById('donate_now_button').addEventListener('click', function 
 
         // ----modal---
         modal.showModal();
+        // ----Clear Input---
+        inputReset('donation_input');
     }
     else {
         alert("Please input correct amount");
     }
+
 });
+
 
 
 // --------Card 2--------
 document.getElementById('donate_now_button_card_2').addEventListener('click', function (event) {
     event.preventDefault();
+
+    let totalAmount = getTextById('total_amount');
     const inputDonateMoneyCard2 = getInputFieldById('donation_input_card_2');
     const donationAmountCard2 = getTextById('donation_amount_card_2');
-
 
     if (totalAmount > inputDonateMoneyCard2 && inputDonateMoneyCard2 > 0 && !isNaN(inputDonateMoneyCard2)) {
         // ------Calculation part -----
@@ -85,6 +90,8 @@ document.getElementById('donate_now_button_card_2').addEventListener('click', fu
         document.getElementById('history_section').appendChild(divCard2);
         // ----modal---
         modal.showModal();
+        // ----Clear Input---
+        inputReset('donation_input_card_2');
     }
     else {
         alert("Please input correct amount");
@@ -96,9 +103,9 @@ document.getElementById('donate_now_button_card_2').addEventListener('click', fu
 // --------Card 3--------
 document.getElementById('donate_now_button_card_3').addEventListener('click', function (event) {
     event.preventDefault();
+    let totalAmount = getTextById('total_amount');
     const inputDonateMoneyCard3 = getInputFieldById('donation_input_card_3');
     const donationAmountCard3 = getTextById('donation_amount_card_3');
-
 
     if (totalAmount > inputDonateMoneyCard3 && inputDonateMoneyCard3 > 0 && !isNaN(inputDonateMoneyCard3)) {
         // ------Calculation part -----
@@ -122,8 +129,11 @@ document.getElementById('donate_now_button_card_3').addEventListener('click', fu
 
         // ----modal---
         modal.showModal();
+        // ----Clear Input---
+        inputReset('donation_input_card_3');
     }
     else {
         alert("Please input correct amount");
     }
+
 });

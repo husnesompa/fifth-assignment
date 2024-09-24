@@ -13,6 +13,15 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .lexend{
+            font-family: "Lexend", system-ui;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        body{
+            font-family: "Lexend", system-ui;
+        }
+
         .btn.active {
             background-color: #B4F461;
             color: black;
@@ -37,15 +46,15 @@
                 </div>
                 <div class="navbar-end">
                     <img src="images/coin.png">
-                    <p id="total_amount" class="md:pl-2 pl-1">5400BDT</p>
+                    <p id="total_amount" class="md:pl-2 pl-1"><span id="currentBalance">5400</span>BDT</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- ---- Button------ -->
     <div class="flex justify-center space-x-4 pt-8 pb-6 sticky top-24 z-[100] backdrop-blur-md ">
-        <button id="donationBtn" class="btn btn-outline hover:bg-[#B4F461]">Donation</button>
-        <button id="historyBtn" class="btn btn-outline hover:bg-[#B4F461] px-6">History</button>
+        <button id="donationBtn" class="btn border-gray-300 hover:bg-[#B4F461]">Donation</button>
+        <button id="historyBtn" class="btn border-gray-300 hover:bg-[#B4F461] px-6">History</button>
     </div>
 
     <!-- -----Card Section ----- -->
@@ -69,7 +78,7 @@
                         and making a positive impact on the lives of those in need.
                     </p>
                     <input id="donation_input" type="text" placeholder="Write Donation Amount"
-                        class="input input-bordered w-full" />
+                        class="input border-gray-300 w-full" />
                     <button id="donate_now_button" class="btn w-full bg-[#B4F461]">Donate Now</button>
                     <!-- ------Modal------ -->
                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -146,3 +155,5 @@
 </body>
 
 </html>
+
+

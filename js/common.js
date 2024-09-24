@@ -44,3 +44,8 @@ function forActiveButton(id) {
     //----- Add 'active' class to the clicked button----
     id.classList.add('active');
 }
+
+// -------Reset Input------
+function inputReset(id) {
+    document.getElementById(id).value = '';
+}
