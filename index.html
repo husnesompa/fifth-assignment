@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fifth assignment Javascript </title>
-
-
-    <!-- ------ LexendFont Link -------- -->
+    <!-- ------ Lexend Font Link -------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
     <!-- ------ DaisyUi Link -------- -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,25 +29,24 @@
                         </div>
                     </div>
                     <div class="">
-                        <a class="btn bg-[#B4F461] px-8 bold font-bold font-black" href="blog.html">Blog</a>
+                        <a class="btn bg-[#B4F461] px-8 bold font-bold" href="blog.html">Blog</a>
                     </div>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <img src="images/logo.png">
-                    <p class="font-bold font-black pl-2">Donate Bangladesh</p>
+                    <p class="font-bold pl-2">Donate Bangladesh</p>
                 </div>
                 <div class="navbar-end">
                     <img src="images/coin.png">
                     <p id="total_amount" class="pl-2">5400BDT</p>
                 </div>
             </div>
-            <!-- ---- Button------ -->
-
         </div>
     </section>
+    <!-- ---- Button------ -->
     <div class="flex justify-center space-x-4 pt-10">
         <button id="donationBtn" class="btn btn-outline">Donation</button>
-        <button id="hitoryBtn" class="btn btn-outline px-6">History</button>
+        <button id="historyBtn" class="btn btn-outline px-6">History</button>
     </div>
     <!-- -----Card Section ----- -->
     <section id="donation_section">
@@ -63,17 +59,32 @@
                 <div class="w-full lg:w-1/2 space-y-4">
                     <div class="bg-gray-100 inline-flex items-center px-3 py-1 space-x-2">
                         <img src="images/coin.png" class="rounded-full">
-                        <span class="text-yellow-500 font-semibold">0 BDT</span>
+                        <span id="donation_amount" class="text-yellow-500 font-semibold">50 BDT</span>
                     </div>
-                    <h2 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <h2 id="noakhali_tittle" class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="text-gray-600">
                         The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your
                         donation will help provide essential supplies and to those affected by this disaster. Every
                         contribution, big or small, makes a difference. Please join us in supporting the relief efforts
                         and making a positive impact on the lives of those in need.
                     </p>
-                    <input id="donation_input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <input id="donation_input" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-full" />
                     <button id="donate_now_button" class="btn w-full bg-[#B4F461]">Donate Now</button>
+                    <!-- ------Modal------ -->
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box text-center flex flex-col items-center">
+                            <h1 class="font-bold text-2xl">Congratulations!</h1>
+                            <img src="images/coin.png" class="h-10 w-10 my-3">
+                            <p class="py-4">You have donated for humankind</p>
+                            <h4 class="font-bold text-xl">Successfully</h4>
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <button id="modal_close_btn" class="btn">Close confirmation</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
                 </div>
             </div>
 
@@ -123,19 +134,13 @@
         </div>
     </section>
     <!-- -----History Section ----- -->
-     <section id="history_section" class="hidden">
-        <div class="container mx-auto w-5/6">
-            <div class="border-2 p-4 my-4">
-                <h3>cccsdcd</h3>
-                <p>sdcdscv</p>
-            </div>
-        </div>
-     </section>
-     <footer class="bg-[#F9F7F3]">
-            <p>Husna Sompa</p>
-     </footer>
-     <script src="js/common.js"></script>
-<script src="js/button.js"></script>
+    <section id="history_section" class="hidden">
+    </section>
+    <!-- -----Footer Section ----- -->
+    <footer class="bg-[#F9F7F3] h-20">
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/button.js"></script>
 </body>
 
 </html>
