@@ -1,5 +1,5 @@
 // -------Button-----
-function showSectionById(id){
+function showSectionById(id) {
     //  ----Hidden all id-----
     document.getElementById('donation_section').classList.add('hidden');
     document.getElementById('history_section').classList.add('hidden');
@@ -8,31 +8,39 @@ function showSectionById(id){
 }
 
 // -------Data from Input Feild------
-function getInputFieldById(id){
+function getInputFieldById(id) {
     const InputValue = document.getElementById(id).value;
     const inputValueToNumber = parseFloat(InputValue);
     return inputValueToNumber;
 }
 
 // -------Data from HTML Tag------
-function getTextById(id){
+function getTextById(id) {
     const tagValue = document.getElementById(id).innerText;
     const intTagValue = parseFloat(tagValue);
     return intTagValue;
 }
 
 // -------Time and Date------
-function forTime(){
+function forTime() {
     const currentTime = new Date();
     const formattedTime = currentTime.toTimeString();
     const formattedDate = currentTime.toUTCString();
-    return formattedDate + ' ' + formattedTime ;
+    return formattedDate + ' ' + formattedTime;
 }
 
 // -------Data from Parent Element------
-function forTittle(id){
+function forTittle(id) {
     const parentDiv = id.parentElement;
     const h2Element = parentDiv.querySelector('h2');
     const tittleText = h2Element.textContent;
     return tittleText;
+}
+
+// -------Active Button------
+function forActiveButton(id) {
+    // -----Remove 'active' class from all buttons----
+    document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+    //----- Add 'active' class to the clicked button----
+    id.classList.add('active');
 }

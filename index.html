@@ -12,42 +12,42 @@
     <!-- ------ DaisyUi Link -------- -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .btn.active {
+            background-color: #B4F461;
+            color: black;
+            ;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- ---- Navbar------ -->
     <section class="bg-[#F9F7F3] sticky top-0 z-50">
-        <div class="container mx-auto pb-10">
+        <div class="container mx-auto pb-8">
             <div class="navbar">
                 <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                    </div>
                     <div class="">
-                        <a class="btn bg-[#B4F461] px-8 bold font-bold" href="blog.html">Blog</a>
+                        <a class="btn bg-[#B4F461] px-6 md:px-8 bold font-bold" href="blog.html">Blog</a>
                     </div>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <img src="images/logo.png">
-                    <p class="font-bold pl-2">Donate Bangladesh</p>
+                    <p class="font-bold md:pl-2 pl-1">Donate Bangladesh</p>
                 </div>
                 <div class="navbar-end">
                     <img src="images/coin.png">
-                    <p id="total_amount" class="pl-2">5400BDT</p>
+                    <p id="total_amount" class="md:pl-2 pl-1">5400BDT</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- ---- Button------ -->
-    <div class="flex justify-center space-x-4 pt-10">
-        <button id="donationBtn" class="btn btn-outline">Donation</button>
-        <button id="historyBtn" class="btn btn-outline px-6">History</button>
+    <div class="flex justify-center space-x-4 pt-8 pb-6 sticky top-24 z-[100] backdrop-blur-md ">
+        <button id="donationBtn" class="btn btn-outline hover:bg-[#B4F461]">Donation</button>
+        <button id="historyBtn" class="btn btn-outline hover:bg-[#B4F461] px-6">History</button>
     </div>
+
     <!-- -----Card Section ----- -->
     <section id="donation_section">
         <div class="container mx-auto">
@@ -96,7 +96,7 @@
                 <div class="w-full lg:w-1/2 space-y-4">
                     <div class="bg-gray-100 inline-flex items-center px-3 py-1 space-x-2">
                         <img src="images/coin.png" class="rounded-full">
-                        <span class="text-yellow-500 font-semibold">0 BDT</span>
+                        <span id="donation_amount_card_2" class="text-yellow-500 font-semibold">0 BDT</span>
                     </div>
                     <h2 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="text-gray-600">
@@ -105,8 +105,9 @@
                         contribution, big or small, makes a difference. Please join us in supporting the relief efforts
                         and making a positive impact on the lives of those in need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="btn w-full bg-[#B4F461]">Donate Now</button>
+                    <input id="donation_input_card_2" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-full" />
+                    <button id="donate_now_button_card_2" class="btn w-full bg-[#B4F461]">Donate Now</button>
                 </div>
             </div>
 
@@ -118,7 +119,7 @@
                 <div class="w-full lg:w-1/2 space-y-4">
                     <div class="bg-gray-100 inline-flex items-center px-3 py-1 space-x-2">
                         <img src="images/coin.png" class="rounded-full">
-                        <span class="text-yellow-500 font-semibold">0 BDT</span>
+                        <span id="donation_amount_card_3" class="text-yellow-500 font-semibold">0 BDT</span>
                     </div>
                     <h2 class="text-xl font-bold">Aid for Injured in the Quota Movement</h2>
                     <p class="text-gray-600">
@@ -127,8 +128,9 @@
                         contribution, big or small, makes a difference. Please join us in supporting the relief efforts
                         and making a positive impact on the lives of those in need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="btn w-full bg-[#B4F461]">Donate Now</button>
+                    <input id="donation_input_card_3" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-full" />
+                    <button id="donate_now_button_card_3" class="btn w-full bg-[#B4F461]">Donate Now</button>
                 </div>
             </div>
         </div>
